@@ -94,8 +94,7 @@
         $addServiceSql = "INSERT INTO service (date_of_service_provided, service_type_id, customer_id, cost, dt_created, service_repeat_date, chemicals, time_consumed) VALUES ('$dateServiceProvided', '$serviceTypeId', '$custId', '$cost', '$datetime', '$repeatDate', '$chemicals', '$timeConsumed')";
         
         if (mysqli_query($con, $addServiceSql)) {
-            echo "Query successful!";
-            //header('location: index.php'); // will change it to Dashboard page when created
+            header('location: index.php');
         } else{
             echo "ERROR: Could not able to execute $addServiceSql. " . mysqli_error($con);
         }
